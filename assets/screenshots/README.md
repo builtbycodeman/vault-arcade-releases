@@ -1,29 +1,22 @@
 # Screenshot guide / 截图维护说明
 
-本目录保存 README 和安装手册使用的产品截图。中文与英文截图采用相同构图和一一对应的文件名。
-
 This directory contains the product screenshots used by the README and installation guides. Chinese and English screenshots should use matching compositions and paired filenames.
 
-## 文件清单 / File list
+本目录保存 README 和安装手册使用的产品截图。中文与英文截图采用相同构图和一一对应的文件名。
 
-| 内容 | 中文文件 | English file |
+## File list / 文件清单
+
+| Content / 内容 | English file | 中文文件 |
 | --- | --- | --- |
-| 游戏大厅 / Game library | `vault-arcade-home-zh.jpg` | `vault-arcade-home-en.jpg` |
-| 墨斗沉浸页 / Inkbreak immersive view | `inkbreak-immersive-zh.jpg` | `inkbreak-immersive-en.jpg` |
-| Runtime 安装页 / Runtime installer | `runtime-package-install-zh.jpg` | `runtime-package-install-en.jpg` |
+| Game library / 游戏大厅 | `vault-arcade-home-en.jpg` | `vault-arcade-home-zh.jpg` |
+| Inkbreak immersive view / 墨斗沉浸页 | `inkbreak-immersive-en.jpg` | `inkbreak-immersive-zh.jpg` |
+| Runtime installer / Runtime 安装页 | `runtime-package-install-en.jpg` | `runtime-package-install-zh.jpg` |
 
-英文版三个文件尚未加入仓库。按上表使用完全一致的文件名放入当前目录后，README 和英文安装手册会自动显示它们，不需要再修改 Markdown。
+All six localized screenshots are present. Replace a screenshot using the exact same filename so the README and installation guides keep working without Markdown changes.
 
-The three English files have not been added yet. Place them in this directory using the exact filenames above. The README and English guide will then display them without further Markdown changes.
+六张本地化截图均已加入仓库。更新截图时保持文件名完全一致，README 和安装手册便不需要同步修改。
 
-## 推荐规格 / Recommended format
-
-- 使用 JPEG，扩展名为 `.jpg`。
-- 推荐 16:10 或 16:9，宽度至少 1600 px。
-- 同一组中英文截图尽量保持相同窗口尺寸、缩放比例和界面位置。
-- 截图前隐藏无关侧栏、开发目录、通知和个人 Vault 内容。
-- 不要包含用户名、本地文件路径、设备名、私人笔记或同步服务信息。
-- 保留应用主体周围少量空间，不要裁掉 Runtime 的退出沉浸按钮或重要操作入口。
+## Recommended format / 推荐规格
 
 - Use JPEG with the `.jpg` extension.
 - Prefer a 16:10 or 16:9 frame at least 1600 px wide.
@@ -31,6 +24,13 @@ The three English files have not been added yet. Place them in this directory us
 - Hide unrelated sidebars, development folders, notifications, and personal Vault content.
 - Do not include usernames, local paths, device names, private notes, or sync-service details.
 - Leave a little space around the product UI. Do not crop out Runtime's immersive-exit control or important actions.
+
+- 使用 JPEG，扩展名为 `.jpg`。
+- 推荐 16:10 或 16:9，宽度至少 1600 px。
+- 同一组中英文截图尽量保持相同窗口尺寸、缩放比例和界面位置。
+- 截图前隐藏无关侧栏、开发目录、通知和个人 Vault 内容。
+- 不要包含用户名、本地文件路径、设备名、私人笔记或同步服务信息。
+- 保留应用主体周围少量空间，不要裁掉 Runtime 的退出沉浸按钮或重要操作入口。
 
 ## 如何拍英文截图 / How to capture the English screenshots
 
