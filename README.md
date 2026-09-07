@@ -14,17 +14,37 @@ Vault Arcade is an offline-first collection of 11 games for Obsidian, built for 
 
 ## Screenshots / 截图
 
-### Game library / 游戏大厅
+截图文件名、推荐尺寸与拍摄方法见[截图维护说明](assets/screenshots/README.md)。
+
+See the [screenshot guide](assets/screenshots/README.md) for filenames, recommended dimensions, and capture instructions.
+
+### 中文界面
+
+#### 游戏大厅
 
 ![Vault Arcade game library](assets/screenshots/vault-arcade-home-zh.jpg)
 
-### Immersive game view / 游戏沉浸模式
+#### 游戏沉浸模式
 
 ![Inkbreak immersive game view](assets/screenshots/inkbreak-immersive-zh.jpg)
 
-### Package installer / 应用包安装入口
+#### 应用包安装入口
 
 ![Interactive Vault Runtime package installer](assets/screenshots/runtime-package-install-zh.jpg)
+
+### English interface
+
+#### Game library
+
+![Vault Arcade game library in English](assets/screenshots/vault-arcade-home-en.jpg)
+
+#### Immersive game view
+
+![Inkbreak immersive game view in English](assets/screenshots/inkbreak-immersive-en.jpg)
+
+#### Package installer
+
+![Interactive Vault Runtime package installer in English](assets/screenshots/runtime-package-install-en.jpg)
 
 ## Included games / 收录游戏
 
@@ -81,4 +101,3 @@ For manual Runtime installation, local `.ivpkg` installation, updates, and troub
 An `.ivpkg` contains executable JavaScript that runs with Obsidian plugin permissions. Download Vault Arcade only from this repository and verify the SHA-256 checksum published with each release.
 
 `.ivpkg` 包含会以 Obsidian 插件权限运行的 JavaScript。请只从本仓库下载 Vault Arcade，并核对每个 Release 同时提供的 SHA-256 校验值。
-

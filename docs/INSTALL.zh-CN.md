@@ -68,6 +68,10 @@ Vault Arcade 不是独立 Obsidian 插件，必须通过开源插件 Interactive
 
 ![Vault Arcade 游戏大厅](../assets/screenshots/vault-arcade-home-zh.jpg)
 
+进入沉浸模式后，游戏会覆盖 Obsidian 的普通工作区并使用完整窗口：
+
+![墨斗：旧城沉浸模式](../assets/screenshots/inkbreak-immersive-zh.jpg)
+
 - 从 Vault Arcade 的 `Home` 页面选择游戏。
 - 每款游戏都可以从笔记进入沉浸模式。
 - 默认语言跟随 Obsidian，也可以从游戏大厅右上角切换简体中文、English 或日本語。
@@ -104,4 +108,3 @@ Vault Arcade 不是独立 Obsidian 插件，必须通过开源插件 Interactive
 ## 安全与完整性
 
 `.ivpkg` 包含可执行 JavaScript，并会以 Obsidian 插件权限运行。请只从本仓库的 Releases 下载，并核对 Release 提供的 SHA-256。安装包中的校验清单可以发现文件损坏，但不能代替对下载来源的信任。
-

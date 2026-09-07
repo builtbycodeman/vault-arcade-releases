@@ -35,7 +35,7 @@ The `.obsidian` directory is hidden by default. If your file manager does not sh
 
 ## Step 2: Install Vault Arcade from its URL
 
-![Runtime package installer](../assets/screenshots/runtime-package-install-zh.jpg)
+![Runtime package installer](../assets/screenshots/runtime-package-install-en.jpg)
 
 1. Open **Settings → Interactive Vault Runtime → Interactive packages**.
 2. In the “Install from URL” section, select **Enter URL**.
@@ -66,7 +66,11 @@ A package installed from a local file cannot use URL-based update checks. Downlo
 
 ## Open and play
 
-![Vault Arcade game library](../assets/screenshots/vault-arcade-home-zh.jpg)
+![Vault Arcade game library](../assets/screenshots/vault-arcade-home-en.jpg)
+
+The immersive view removes the surrounding Obsidian interface so the game can use the full window:
+
+![Inkbreak immersive game view](../assets/screenshots/inkbreak-immersive-en.jpg)
 
 - Choose a game from the Vault Arcade `Home` page.
 - Every game can enter an immersive view from its note.
@@ -104,4 +108,3 @@ Confirm that Runtime is enabled and that the installed package files were not mo
 ## Security and integrity
 
 An `.ivpkg` contains executable JavaScript that runs with Obsidian plugin permissions. Download Vault Arcade only from this repository and verify the SHA-256 checksum provided with the release. The package manifest detects damaged or altered files, but it does not replace trust in the download source.
-
