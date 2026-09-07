@@ -4,15 +4,68 @@
 
 ## 运行要求
 
-- Obsidian 1.6.0 或更高版本
+- 使用推荐的 BRAT 安装方式需要 Obsidian 1.7.2 或更高版本
+- BRAT 1.1.0 或更高版本
 - Interactive Vault Runtime 0.1.12 或更高版本
 - macOS、Windows、Linux、iOS 或 Android 上的 Obsidian
 
 Vault Arcade 安装完成后可以离线运行，不需要注册账号。部分游戏的局域网联机功能需要设备位于同一网络。
 
-## 第一步：安装 Interactive Vault Runtime
+## 第一步：安装并启用 BRAT
 
 Vault Arcade 不是独立 Obsidian 插件，必须通过开源插件 Interactive Vault Runtime 安装和运行。
+
+请使用 [BRAT（Beta Reviewers Auto-update Tool）](https://github.com/TfTHacker/obsidian42-brat)安装和持续更新 Runtime：
+
+1. 在 Obsidian 中打开**设置 → 第三方插件**。
+2. 点击**浏览**，搜索 **BRAT**，然后安装 **Obsidian42 - BRAT**。
+3. 启用 **BRAT**。
+
+## 第二步：使用 BRAT 安装和管理 Interactive Vault Runtime
+
+1. 使用 Windows/Linux 的 `Ctrl+P` 或 macOS 的 `Cmd+P` 打开命令面板。
+2. 运行 **BRAT: Plugins: Add a beta plugin for testing**。旧版 BRAT 中的命令名称可能显示为 **BRAT: Add a beta plugin for testing**。
+3. 输入 Runtime 源码仓库地址：
+
+   ```text
+   https://github.com/builtbycodeman/interactive-vault-runtime
+   ```
+
+4. 选择跟踪 **latest** 版本并确认 **Add Plugin**。除非确实希望停留在某个版本，否则不要选择冻结版本。
+5. 等待 BRAT 从对应的 GitHub Release 下载 `main.js`、`manifest.json` 和 `styles.css`。
+6. 打开**设置 → 第三方插件**；如有需要先刷新插件列表，然后启用 **Interactive Vault Runtime**。
+
+BRAT 对 Runtime 的管理与 Vault Arcade 游戏包相互独立。以后可以打开**设置 → BRAT**，在 Beta 插件列表中管理 Interactive Vault Runtime：
+
+- 保持 **latest**，即可跟踪 Runtime 的新版本。
+- 使用 BRAT 设置页中的更新按钮，或在命令面板运行 **BRAT: Plugins: Check for updates to all beta plugins and UPDATE**。
+- 使用编辑按钮在最新版本和指定的冻结版本之间切换。
+- 从 BRAT 跟踪列表移除 Runtime 只会停止 BRAT 更新，不会卸载插件；如需卸载，请再到**设置 → 第三方插件**中操作。
+
+更多更新选项参见 [BRAT 官方文档](https://tfthacker.com/BRAT)。
+
+## 第三步：从 URL 安装 Vault Arcade
+
+![Runtime 应用包安装页面](../assets/screenshots/runtime-package-install-zh.jpg)
+
+1. 打开**设置 → Interactive Vault Runtime → 互动应用包**。
+2. 在“从 URL 安装”区域点击**输入 URL**。
+3. 粘贴固定下载地址：
+
+   ```text
+   https://github.com/builtbycodeman/vault-arcade-releases/releases/latest/download/vault-arcade.ivpkg
+   ```
+
+4. 等待 Runtime 下载并校验安装包。
+5. 核对包名、发布者、版本、文件数量和安装目录。
+6. 使用建议目录或选择一个专用目录，然后点击**安装**。
+7. 安装完成后，从已安装列表打开 Vault Arcade，或打开安装目录中的 `Home` 笔记。
+
+建议始终使用上面的固定 URL。Runtime 会保存安装来源，以后可以通过“检查更新”获取新版。
+
+## Runtime 手动安装备用方案
+
+只有在 BRAT 无法使用时才采用此方式：
 
 1. 打开 [Interactive Vault Runtime 最新 Release](https://github.com/builtbycodeman/interactive-vault-runtime/releases/latest)。
 2. 下载 Release 中的以下文件：
@@ -32,25 +85,6 @@ Vault Arcade 不是独立 Obsidian 插件，必须通过开源插件 Interactive
 6. 打开 **设置 → 第三方插件**，启用 **Interactive Vault Runtime**。
 
 `.obsidian` 是隐藏目录。如果在文件管理器中看不到它，可以先在 Obsidian 中打开 **设置 → 文件与链接 → 配置文件夹位置**确认目录名称，再让系统显示隐藏文件。
-
-## 第二步：从 URL 安装 Vault Arcade
-
-![Runtime 应用包安装页面](../assets/screenshots/runtime-package-install-zh.jpg)
-
-1. 打开 **设置 → Interactive Vault Runtime → 互动应用包**。
-2. 在“从 URL 安装”区域点击**输入 URL**。
-3. 粘贴固定下载地址：
-
-   ```text
-   https://github.com/builtbycodeman/vault-arcade-releases/releases/latest/download/vault-arcade.ivpkg
-   ```
-
-4. 等待 Runtime 下载并校验安装包。
-5. 核对包名、发布者、版本、文件数量和安装目录。
-6. 使用建议目录或选择一个专用目录，然后点击**安装**。
-7. 安装完成后，从已安装列表打开 Vault Arcade，或打开安装目录中的 `Home` 笔记。
-
-建议始终使用上面的固定 URL。Runtime 会保存安装来源，以后可以通过“检查更新”获取新版。
 
 ## 使用本地文件安装
 
@@ -91,7 +125,11 @@ Vault Arcade 不是独立 Obsidian 插件，必须通过开源插件 Interactive
 
 ### 设置中没有 Interactive Vault Runtime
 
-确认插件目录名称为 `interactive-vault-runtime`，目录内直接包含 `main.js`、`manifest.json` 和 `styles.css`，然后重新加载 Obsidian。
+打开**设置 → BRAT**，确认 Beta 插件列表中存在 `builtbycodeman/interactive-vault-runtime`。执行 BRAT 的重新安装或更新操作，然后刷新**设置 → 第三方插件**并启用 Runtime。如果采用了手动备用方案，请确认插件目录名称为 `interactive-vault-runtime`，且目录内直接包含 `main.js`、`manifest.json` 和 `styles.css`。
+
+### BRAT 无法安装或更新 Runtime
+
+确认仓库地址完整填写为 `https://github.com/builtbycodeman/interactive-vault-runtime`，并确认 BRAT 正在跟踪最新版本。如果 BRAT 提示 GitHub API 请求频率受限，请稍后再试；安装这个公开仓库通常不需要填写 GitHub Token。必要时可采用 Runtime 手动安装备用方案。
 
 ### URL 下载失败
 

@@ -57,22 +57,26 @@ See the [screenshot guide](assets/screenshots/README.md) for filenames, recommen
 
 ## Quick install
 
-1. Install and enable [Interactive Vault Runtime](https://github.com/builtbycodeman/interactive-vault-runtime/releases/latest).
-2. In Obsidian, open **Settings → Interactive Vault Runtime → Interactive packages**.
-3. Select **Enter URL** and paste the stable download URL below:
+1. In Obsidian, open **Settings → Community plugins → Browse**, install **Obsidian42 - BRAT**, and enable it.
+2. Open the command palette and run **BRAT: Plugins: Add a beta plugin for testing**.
+3. Enter `https://github.com/builtbycodeman/interactive-vault-runtime`, track the **latest** version, and add the plugin.
+4. Open **Settings → Community plugins** and enable **Interactive Vault Runtime**.
+5. Open **Settings → Interactive Vault Runtime → Interactive packages**.
+6. Select **Enter URL** and paste the stable download URL below:
 
    ```text
    https://github.com/builtbycodeman/vault-arcade-releases/releases/latest/download/vault-arcade.ivpkg
    ```
 
-4. Review the package and destination folder, then select **Install**.
-5. Open Vault Arcade from the installed package list, or open the `Home` note in its installation folder.
+7. Review the package and destination folder, then select **Install**.
+8. Open Vault Arcade from the installed package list, or open the `Home` note in its installation folder.
 
-For manual Runtime installation, local `.ivpkg` installation, updates, and troubleshooting, see the [English installation guide](docs/INSTALL.en.md).
+BRAT keeps Runtime updated from its GitHub Releases. For Runtime management, manual fallback installation, local `.ivpkg` installation, and troubleshooting, see the [English installation guide](docs/INSTALL.en.md).
 
 ## Requirements
 
-- Obsidian 1.6.0 or later
+- Obsidian 1.7.2 or later for the recommended BRAT installation
+- BRAT 1.1.0 or later
 - Interactive Vault Runtime 0.1.12 or later
 - Desktop or mobile
 

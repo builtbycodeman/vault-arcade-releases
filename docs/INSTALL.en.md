@@ -4,15 +4,68 @@
 
 ## Requirements
 
-- Obsidian 1.6.0 or later
+- Obsidian 1.7.2 or later for the recommended BRAT installation
+- BRAT 1.1.0 or later
 - Interactive Vault Runtime 0.1.12 or later
 - Obsidian on macOS, Windows, Linux, iOS, or Android
 
 Vault Arcade works offline after installation and does not require an account. LAN multiplayer features require the participating devices to be on the same network.
 
-## Step 1: Install Interactive Vault Runtime
+## Step 1: Install and enable BRAT
 
 Vault Arcade is not a standalone Obsidian plugin. It is installed and hosted by the open-source Interactive Vault Runtime plugin.
+
+Use [BRAT (Beta Reviewers Auto-update Tool)](https://github.com/TfTHacker/obsidian42-brat) to install and keep Runtime up to date:
+
+1. Open **Settings → Community plugins** in Obsidian.
+2. Select **Browse**, search for **BRAT**, and install **Obsidian42 - BRAT**.
+3. Enable **BRAT**.
+
+## Step 2: Install and manage Interactive Vault Runtime with BRAT
+
+1. Open the command palette with `Ctrl+P` on Windows/Linux or `Cmd+P` on macOS.
+2. Run **BRAT: Plugins: Add a beta plugin for testing**. The exact wording may be shortened to **BRAT: Add a beta plugin for testing** in older BRAT versions.
+3. Enter the Runtime repository URL:
+
+   ```text
+   https://github.com/builtbycodeman/interactive-vault-runtime
+   ```
+
+4. Track the **latest** version and confirm **Add Plugin**. Do not freeze a version unless you deliberately want to stay on that release.
+5. Wait for BRAT to download `main.js`, `manifest.json`, and `styles.css` from the matching GitHub Release.
+6. Open **Settings → Community plugins**, refresh the installed plugin list if necessary, and enable **Interactive Vault Runtime**.
+
+BRAT tracks Runtime independently from Vault Arcade. To manage it later, open **Settings → BRAT** and find Interactive Vault Runtime in the beta plugin list:
+
+- Keep it on **latest** to receive new Runtime releases.
+- Use BRAT's update control, or run **BRAT: Plugins: Check for updates to all beta plugins and UPDATE** from the command palette.
+- Use the edit control to switch between the latest release and a frozen release.
+- Removing Runtime from BRAT's tracked list stops BRAT updates but does not uninstall the plugin. Uninstall it separately from **Settings → Community plugins** if needed.
+
+See the [official BRAT documentation](https://tfthacker.com/BRAT) for additional settings and update behavior.
+
+## Step 3: Install Vault Arcade from its URL
+
+![Runtime package installer](../assets/screenshots/runtime-package-install-en.jpg)
+
+1. Open **Settings → Interactive Vault Runtime → Interactive packages**.
+2. In the “Install from URL” section, select **Enter URL**.
+3. Paste the stable download URL:
+
+   ```text
+   https://github.com/builtbycodeman/vault-arcade-releases/releases/latest/download/vault-arcade.ivpkg
+   ```
+
+4. Wait while Runtime downloads and validates the package.
+5. Review the package name, publisher, version, file count, and destination folder.
+6. Keep the suggested destination or choose a dedicated folder, then select **Install**.
+7. Open Vault Arcade from the installed package list, or open the `Home` note in the installation folder.
+
+Use the stable URL above whenever possible. Runtime remembers it and can check the same address for future updates.
+
+## Manual Runtime installation fallback
+
+Use this only if BRAT is unavailable:
 
 1. Open the [latest Interactive Vault Runtime release](https://github.com/builtbycodeman/interactive-vault-runtime/releases/latest).
 2. Download these release assets:
@@ -32,25 +85,6 @@ Vault Arcade is not a standalone Obsidian plugin. It is installed and hosted by 
 6. Open **Settings → Community plugins** and enable **Interactive Vault Runtime**.
 
 The `.obsidian` directory is hidden by default. If your file manager does not show it, enable hidden files in your operating system before copying the plugin files.
-
-## Step 2: Install Vault Arcade from its URL
-
-![Runtime package installer](../assets/screenshots/runtime-package-install-en.jpg)
-
-1. Open **Settings → Interactive Vault Runtime → Interactive packages**.
-2. In the “Install from URL” section, select **Enter URL**.
-3. Paste the stable download URL:
-
-   ```text
-   https://github.com/builtbycodeman/vault-arcade-releases/releases/latest/download/vault-arcade.ivpkg
-   ```
-
-4. Wait while Runtime downloads and validates the package.
-5. Review the package name, publisher, version, file count, and destination folder.
-6. Keep the suggested destination or choose a dedicated folder, then select **Install**.
-7. Open Vault Arcade from the installed package list, or open the `Home` note in the installation folder.
-
-Use the stable URL above whenever possible. Runtime remembers it and can check the same address for future updates.
 
 ## Install from a local file
 
@@ -91,7 +125,11 @@ Updating replaces the installed application files but preserves separately store
 
 ### Interactive Vault Runtime is missing from Settings
 
-Confirm that the plugin folder is named `interactive-vault-runtime` and directly contains `main.js`, `manifest.json`, and `styles.css`. Reload Obsidian afterward.
+Open **Settings → BRAT** and confirm that `builtbycodeman/interactive-vault-runtime` is in the beta plugin list. Use BRAT's reinstall or update action, then refresh **Settings → Community plugins** and enable Runtime. If you used the manual fallback, confirm that the plugin folder is named `interactive-vault-runtime` and directly contains `main.js`, `manifest.json`, and `styles.css`.
+
+### BRAT cannot install or update Runtime
+
+Confirm that the repository URL is exactly `https://github.com/builtbycodeman/interactive-vault-runtime` and that BRAT is tracking the latest release. GitHub limits unauthenticated API requests; wait and retry if BRAT reports a rate-limit error. A GitHub token is not normally required for this public repository. You can use the manual Runtime installation fallback if necessary.
 
 ### The URL download fails
 
