@@ -1,0 +1,5 @@
+.DS_Store
+
+# Packages belong in GitHub Release assets, not in repository history.
+*.ivpkg
+*.ivpkg.sha256
